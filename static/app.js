@@ -1,4 +1,12 @@
-console.log("here we go");
+import fetchAndReplace from './js/fetch-and-replace';
+import './css/styles.scss';
+import * as $ from 'jquery';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mainDiv = $('.container');
+  fetchAndReplace(mainDiv).done();
+});
+
 
 
 /*
