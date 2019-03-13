@@ -1,5 +1,4 @@
 export default function(elements) {
-  console.log('document: ', document.body.innerHTML);
   elements.each((index, el) => {
     const line = [];
     el.innerHTML
