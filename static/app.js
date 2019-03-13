@@ -10,7 +10,7 @@ console.log("here we go");
  *    from the server and replaces the contents of the <div class="container"> div of the website.
  * 
  * 2. There are lots of o's in the imported text. As the letter o is very important for this exercise, 
- *    we should highlight it. Highlight all the o's (upper- and lowercase) with my-blue background (see styles.css for 
+ *    we should highlight it. Highlight all the o's (upper- and lowercase) with my-blue background (see styles.scss for
  *    more information about that color) and white font color, a 30% bigger font size and add some 
  *    padding so that every o stands out.
  * 
