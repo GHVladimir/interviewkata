@@ -1,10 +1,15 @@
 import fetchAndReplace from './js/fetch-and-replace';
+import highlightText from './js/highlight-text';
+
 import './css/styles.scss';
 import * as $ from 'jquery';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mainDiv = $('.container');
-  fetchAndReplace(mainDiv).done();
+  fetchAndReplace(mainDiv).done(() => {
+    highlightText(mainDiv, 'o', 'letter letter--o');
+    highlightText(mainDiv, 'r', 'letter letter--r');
+  });
 });
 
 
