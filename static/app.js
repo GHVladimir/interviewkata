@@ -1,5 +1,6 @@
 import fetchAndReplace from './js/fetch-and-replace';
 import highlightText from './js/highlight-text';
+import paragraphTextOrder from './js/paragraph-text-order';
 
 import './css/styles.scss';
 import * as $ from 'jquery';
@@ -9,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchAndReplace(mainDiv).done(() => {
     highlightText(mainDiv, 'o', 'letter letter--o');
     highlightText(mainDiv, 'r', 'letter letter--r');
+    paragraphTextOrder($('p'));
   });
 });
 
