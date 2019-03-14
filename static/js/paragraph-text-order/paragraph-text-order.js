@@ -1,8 +1,16 @@
+let classesUsed = '';
+
 export default function(elements) {
+  let regexClasses = '';
+  if (regexClasses) {
+    [...new Set(classesUsed.trim().split(' '))].forEach(cl => {
+      regexClasses += '(?! '+ cl +')';
+    });
+  }
+  const regex = new RegExp('.*?(?! class)'+ regexClasses + '[ .]', 'g');
   elements.each((index, el) => {
     const line = [];
-    el.innerHTML
-      .match(/.*?(?! class)(?! letter)[ .]/g) && el.innerHTML.match(/.*?(?! class)(?! letter)[ .]/g)
+    el.innerHTML.match(regex)
       .forEach(word => {
         word = word.replace(/[:;,.!?\\]/g, '');
         word = word.trim();
@@ -15,4 +23,8 @@ export default function(elements) {
     );
     el.innerHTML = line.join(' ');
   });
+}
+
+export function setClasses(classes) {
+  classesUsed += classes + ' ';
 }
