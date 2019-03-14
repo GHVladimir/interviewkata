@@ -13,7 +13,7 @@ describe('Text order in paragraph', () => {
   });
 
   it('should be sorted alphabetically', () => {
-    sort($('p'));
-    expect($('p')[0].innerHTML.split(' ')[0]).toEqual('dummy');
+    sort($(document.getElementsByTagName('p')));
+    expect($(document.getElementsByTagName('p'))[0].innerHTML.split(' ')[0]).toEqual('dummy');
   });
 });
