@@ -1,3 +1,5 @@
+import {setClasses} from "../paragraph-text-order/paragraph-text-order";
+
 function iterateChildren(node, text, classes) {
   let sibling;
 
@@ -30,6 +32,7 @@ function wrapMatches(textNode, text, classes) {
 }
 
 export default function highlight(parent, text, classes) {
+  setClasses(classes);
   parent.each(function(index, el) {
     iterateChildren(el, text, classes);
   })
