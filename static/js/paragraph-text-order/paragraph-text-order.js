@@ -2,7 +2,7 @@ let classesUsed = '';
 
 export default function(elements) {
   let regexClasses = '';
-  if (regexClasses) {
+  if (classesUsed) {
     [...new Set(classesUsed.trim().split(' '))].forEach(cl => {
       regexClasses += '(?! '+ cl +')';
     });
